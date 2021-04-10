@@ -19,7 +19,8 @@ class LiveCapture(Capture):
 
     def __init__(self, interface=None, bpf_filter=None, display_filter=None, only_summaries=False, decryption_key=None,
                  encryption_type='wpa-pwk', output_file=None, decode_as=None, disable_protocol=None, tshark_path=None,
-                 override_prefs=None, capture_filter=None, monitor_mode=None, use_json=False, include_raw=False):
+                 override_prefs=None, capture_filter=None, monitor_mode=None, use_json=False, include_raw=False,
+                 custom_parameters=None):
         """
         Creates a new live capturer on a given interface. Does not start the actual capture itself.
 
@@ -45,7 +46,8 @@ class LiveCapture(Capture):
                                           decryption_key=decryption_key, encryption_type=encryption_type,
                                           output_file=output_file, decode_as=decode_as, disable_protocol=disable_protocol,
                                           tshark_path=tshark_path, override_prefs=override_prefs,
-                                          capture_filter=capture_filter, use_json=use_json, include_raw=include_raw)
+                                          capture_filter=capture_filter, use_json=use_json, include_raw=include_raw,
+                                          custom_parameters=custom_parameters)
         self.bpf_filter = bpf_filter
         self.monitor_mode = monitor_mode
 
