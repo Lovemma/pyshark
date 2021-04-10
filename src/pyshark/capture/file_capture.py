@@ -36,6 +36,7 @@ class FileCapture(Capture):
         :param use_json: Uses tshark in JSON mode (EXPERIMENTAL). It is a good deal faster than XML
         but also has less information. Available from Wireshark 2.2.0.
         :param output_file: A string of a file to write every read packet into (useful when filtering).
+        :param custom_parameters: A dict of custom parameters to pass to tshark, i.e. {"--param": "value"}
         """
         super(FileCapture, self).__init__(display_filter=display_filter, only_summaries=only_summaries,
                                           decryption_key=decryption_key, encryption_type=encryption_type,
